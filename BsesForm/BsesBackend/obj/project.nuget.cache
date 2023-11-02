@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zn4SOvSnxoXCyBROE/ajpH9rz3VabWM3b7sX1B3GDon0n7pNb1HtWcT/Le3BcUHBNSmovxJzCXv1lU4CSmjB1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\41019805\\Documents\\Tanya Data\\tanya\\Bses\\BsesForm\\BsesForm\\BsesBackend\\BsesBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\41019805\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\41019805\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\41019805\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\41019805\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\41019805\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\41019805\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

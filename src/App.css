@@ -1,0 +1,307 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo-container {
+
+  margin: 2vh;
+
+}
+.centered-text {
+  text-align: left;
+  display: flex;
+  margin-left: 1%;
+  align-items: left;
+  height: 5vh;
+  margin-top: 15px;
+  width: 80%;
+
+}
+
+
+/* .centered-container {
+  display: flex;
+} */
+
+
+.individual-form,
+.firm-form {
+  margin: 20px;
+}
+
+Button {
+  margin-top: 10px;
+}
+
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.form-field {
+  margin: 12px 0;
+}
+
+/* Apply styles to the individual form */
+.individual-form {
+  display: flex;
+  flex-direction: row;
+  /* Arrange the fields horizontally */
+  align-items: center;
+  text-align: left;
+}
+
+/* Adjust the alignment and spacing of form fields within individual-form */
+
+.individual-form [control-id="firstName"],
+.individual-form [control-id="middleName"],
+.individual-form [control-id="lastName"] {
+  margin: 5%;
+  /* Add space between fields */
+}
+
+/* Adjust the alignment of the Title select element */
+.individual-form [control-id="title"] {
+  margin-right: 16px;
+  /* Create spacing between Title and First Name */
+}
+/* app.css */
+.image{
+  height: 5%;
+  width: 5%;
+}
+.my-navbar{
+ justify-content: center;
+ display: flex;
+}
+.my-navbar .nav-link:hover {
+  color: grey;
+  border-bottom: 2px solid red;
+}
+
+
+.my-navbar .home-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.icon-container {
+  text-align: center;
+}
+
+.home-icon {
+  width: 90px; /* Adjust the width and height as needed */
+  height: 90px;
+  transition: transform 1s;
+}
+
+#new-home-icon {
+  display: none;
+}
+
+#home-icon:hover {
+  transform: scale(1.1); /* Adjust the scale as needed */
+}
+
+#home-icon:hover + #new-home-icon {
+  display: block;
+  content: url('./components/images/redhome.png');
+}
+
+.title{
+  width: 20%;
+}
+
+/* Style for the form container */
+.form-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Style for form labels */
+.form-label {
+   margin-bottom: 10px;
+}
+
+/* Style for select input */
+.select-input {
+  width: 100%;
+}
+
+/* Style for radio buttons */
+.radio-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Style for text inputs */
+.text-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Style for the submit button */
+
+.Button{
+  background-color: #D83F31;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.Button:hover{
+    background-color: white;
+    border: 5px solid #D83F31;
+    border-radius: 5px;
+  }
+  
+.submit-Button {
+  background-color: #D83F31;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-Button:hover {
+  background-color: white;
+  border: 5px solid #D83F31;
+  border-radius: 5px;
+}
+.type{
+  width: 30%;
+}
+
+.firstname{
+  display: flex;
+  justify-content: left;
+}
+
+.middlename{
+  display: inline;
+  inline-size: 50%;
+}
+
+.row{
+  align-items: center;
+  display: flex;
+}
+
+/* Style for radio buttons */
+.form-check-input[type="radio"] {
+  margin-right: 10px;
+  border-radius: 1px; /* Adjust the spacing between radio button and label */
+}
+
+/* Style for the radio button labels */
+.form-check-label {
+  font-weight: normal; /* Remove the bold style from labels */
+  margin-right: 15px; /* Adjust the spacing between labels if needed */
+}
+
+ Button {
+  background-color: rgb(212, 62, 62);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Style for the selected button */
+Button.selected {
+  background-color: white;
+  color: rgb(212, 62, 62);;
+  border: 2px solid rgb(212, 62, 62);
+  border-radius: 5px;
+  }
+
+/* Style for the main content */
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for h2 headings */
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.consumer{
+  background-color: rgb(240, 240, 240);
+  
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 5px;
+ width: 100%;
+}
+.cust{
+ background-color: white;
+    border-radius: 4px;
+    box-shadow: #282c34;
+  padding: 15px;
+text-align: left;
+  width: 100%;
+}
+.centered-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .cardstyle{
+    background-color: rgb(240, 240, 240);
+  }
+  .mainblock{
+    box-sizing: border-box;
+  }
+  

@@ -71,7 +71,7 @@ const Individual = () => {
         </Form.Control>
       </Form.Group>
       </div>
-      <Row  className="mb-3">
+      <Row  >
       <div className='div2'>
       <Form.Group as={Col} controlId="firstName">
         <Form.Label>First Name:</Form.Label>

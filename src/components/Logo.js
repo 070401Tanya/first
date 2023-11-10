@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container';
 function Logo() {
     return (
 
-        <Container className="logo-container">
+        <div className="logo-container">
             <Image src="logo.png" />
-        </Container>
+        </div>
 
     );
 }

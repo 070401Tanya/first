@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import { Card } from 'react-bootstrap';
 
 function InDash() {
   const [data, setData] = useState([]);
@@ -22,6 +23,10 @@ function InDash() {
   }, []);
 
   return (
+    <div className="centered-box">
+      <Card className="cardstyle" style={{ width: '60rem' }}>
+        <Card.Header style={{ textAlign: 'left' }}><p>Apply Online / New Connection / Request No: R171020230199</p></Card.Header>
+        <Card.Body>
     
            <Table >
         <thead>
@@ -47,8 +52,10 @@ function InDash() {
           ))}
         </tbody>
       </Table>
-   
+ 
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
-
-export default InDash;
+ export default InDash;

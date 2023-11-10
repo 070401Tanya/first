@@ -38,8 +38,8 @@
   }
 }
 .logo-container {
-
-  margin: 2vh;
+align-content: left;
+  margin: 3vh;
 
 }
 .centered-text {
@@ -260,7 +260,7 @@ Button {
 /* Style for the selected button */
 Button.selected {
   background-color: white;
-  color: rgb(212, 62, 62);;
+  color: rgb(212, 62, 62);
   border: 2px solid rgb(212, 62, 62);
   border-radius: 5px;
   }
@@ -296,12 +296,30 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+    }
 
-  .cardstyle{
+ .cardstyle{
     background-color: rgb(240, 240, 240);
   }
   .mainblock{
     box-sizing: border-box;
   }
-  
+  .login-box{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 30px;
+    background-image: './component/imges/background.jpg';
+  }
+  .loginstyle{
+    background-color: #F4E0B9;
+  }
+  .upload{
+   border: 2px solid rgb(240, 240, 240); 
+   border-radius: 5px;
+
+  }
+  .upload:hover{
+    border: 2px solid grey;
+    }
+    

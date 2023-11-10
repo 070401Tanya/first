@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import ConditionalRendering from './ConditionalRendering';
+import ConsumerType from './ConsumerType';
 import UserDashboard from './UserDashboard';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 
-function DashBfront() {
+function NavBar() {
   //front dashboard
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -81,9 +81,9 @@ function NewConnection({ selectedOption }) {
   return (
     <div>
       
-      {selectedOption === 'New Connection' && <ConditionalRendering />}
+      {selectedOption === 'New Connection' && <ConsumerType />}
     </div>
   );
 }
 
-export default DashBfront;
+export default NavBar;

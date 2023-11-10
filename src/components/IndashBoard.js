@@ -25,37 +25,36 @@ function InDash() {
   return (
     <div className="centered-box">
       <Card className="cardstyle" style={{ width: '60rem' }}>
-        <Card.Header style={{ textAlign: 'left' }}><p>Apply Online / New Connection / Request No: R171020230199</p></Card.Header>
+        
         <Card.Body>
-    
-           <Table >
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Relationship</th>
-            <th>Father's/Husband's Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(item => (
-            <tr key={item.title + item.firstName}>
-              <td>{item.title}</td>
-              <td>{item.firstName}</td> {/* Use "FirstName" instead of "FirstName" */}
-              <td>{item.middleName}</td> {/* Use "MiddleName" instead of "middleName" */}
-              <td>{item.lastName}</td> {/* Use "LastName" instead of "lastName" */}
-              <td>{item.relationship}</td>
-              <td>{item.gName}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
- 
+          <Table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Relationship</th>
+                <th>Father's/Husband's Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map(item => (
+                <tr key={item.title + item.firstName}>
+                  <td>{item.title}</td>
+                  <td>{item.firstName}</td>
+                  <td>{item.middleName}</td>
+                  <td>{item.lastName}</td>
+                  <td>{item.relationship}</td>
+                  <td>{item.gName}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </Card.Body>
       </Card>
     </div>
   );
 }
- export default InDash;
+
+export default InDash;

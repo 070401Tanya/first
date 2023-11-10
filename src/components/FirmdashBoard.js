@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Pagination from 'react-bootstrap/Pagination';
+import { Card } from 'react-bootstrap';
 
 function FirmDash() {
   const [data, setData] = useState([]);
@@ -24,7 +25,10 @@ function FirmDash() {
 
 
   return (
-    <div>
+    <div className="centered-box">
+      <Card className="cardstyle" style={{ width: '60rem' }}>
+        
+        <Card.Body>
             <Table >
         <thead >
           <tr>
@@ -49,9 +53,8 @@ function FirmDash() {
           ))}
         </tbody>
       </Table>
-
-    
-
+      </Card.Body>
+      </Card>
     </div>
   );
 }

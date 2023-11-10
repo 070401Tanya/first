@@ -15,7 +15,7 @@ function UserDashboard() {
        
            <div className="centered-box" style={{ textAlign: 'left', padding: '30px'}}>
       <Card className="cardstyle"  style={{ width: '60rem' }}>
-      <Card.Header style={{ textAlign: 'left' }}>Apply Online / New Connection / Request No: R171020230199  </Card.Header>
+      <Card.Header style={{ textAlign: 'center' }}> Dashboard  </Card.Header>
       <Card.Body>
    
             <nav>

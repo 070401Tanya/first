@@ -34,7 +34,7 @@ function ConsumerType() {
   return (
     <div className="centered-box">
       <Card className="cardstyle" style={{ width: '60rem' }}>
-        <Card.Header style={{ textAlign: 'left' }}><p>Apply Online / New Connection / Request No: R171020230199</p></Card.Header>
+        <Card.Header style={{ textAlign: 'left'}}><p>Apply Online / New Connection / Request No: </p></Card.Header>
         <Card.Body>
           <div className='cust'>
             <Form>

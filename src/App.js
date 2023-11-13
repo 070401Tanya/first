@@ -7,6 +7,8 @@ import Login from './LoginForm';
 import ConditionalRendering from './components/ConditionalRendering';
 import Practise from './components/Practise';
 import ProductItem from './components/Product';
+import Address from './components/Address';
+import ConnectionDetails from './components/ConnectionDetails';
 
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
     <div className="background-image" >
       <Logo />
      <NavBar />  
-     <Login/>
+     {/* <Login/> */}
+     <Address/>
+     <ConnectionDetails/>
     
       {/* <ConsumerType/> */}
       {/* <ConditionalRendering/> */}

@@ -3,22 +3,15 @@ import './App.css';
 import Logo from './components/Logo';
 import NavBar from './components/NavBar';
 import Login from './LoginForm';
-// import ConsumerType from './components/ConsumerType';
-import ConditionalRendering from './components/ConditionalRendering';
-import Practise from './components/Practise';
-import ProductItem from './components/Product';
 import Address from './components/Address';
-import ConnectionDetails from './components/ConnectionDetails';
-
 
 function App() {
   return (
     <div className="background-image" >
       <Logo />
      <NavBar />  
-     {/* <Login/> */}
+     <Login/>
      <Address/>
-     <ConnectionDetails/>
     
       {/* <ConsumerType/> */}
       {/* <ConditionalRendering/> */}

@@ -5,6 +5,8 @@ import NavBar from './components/NavBar';
 import Login from './LoginForm';
 import Address from './components/Address';
 import SelfDeclaration from './components/SelfDeclaration';
+import ImportantDoc from './components/ImportantDoc';
+import DocChecklist from './components/DocChecklist';
 
 
 
@@ -15,11 +17,13 @@ function App() {
 
       
 {/* <Greeting name="Hello"/> */}
+<ImportantDoc/>
    <Logo />
      <NavBar />  
-     <Login/>
+     {/* <Login/>
      <SelfDeclaration/>
-     {/* <Address/> */}
+    <Address/> */}
+    <DocChecklist/>
   
     
       {/* <ConsumerType/> */}

@@ -244,7 +244,7 @@ function Address() {
                             <br /> <br />
                             <Form.Group controlId="relationship">
                                 <Form.Check
-                                    type="radio"
+                                    type="checkbox"
                                     label="Is supply address same as communication address?"
                                     onChange={handleRadioChange}
                                     id="relationship"

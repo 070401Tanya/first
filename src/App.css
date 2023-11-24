@@ -108,13 +108,17 @@ Button {
   width: 5%;
 }
 .my-navbar{
- justify-content: center;
- display: flex;
+ justify-content: left;
+
 }
 .my-navbar .nav-link:hover {
   color: grey;
   border-bottom: 2px solid red;
 }
+.shadow{
+  background-color: #FFF3E2;
+}
+
 
 
 .my-navbar .home-logo {
@@ -268,8 +272,7 @@ Button.selected {
 /* Style for the main content */
 main {
   text-align: center;
-  padding: 20px;
-}
+ }
 
 /* Style for h2 headings */
 h2 {
@@ -278,7 +281,7 @@ h2 {
 }
 .consumer{
   background-color: rgb(240, 240, 240);
-  
+  font-weight: bold;
   background-color: rgb(240, 240, 240);
   border-radius: 5px;
   padding: 5px;
@@ -321,4 +324,9 @@ text-align: left;
   }
   .upload:hover{
     border: 2px solid grey;
+    }
+
+
+    .heading{
+font-weight: bold;
     }

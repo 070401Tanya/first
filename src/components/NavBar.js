@@ -3,6 +3,7 @@ import ConsumerType from './ConsumerType';
 import UserDashboard from './UserDashboard';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { Image } from 'react-bootstrap';
 
 
 function NavBar() {
@@ -25,8 +26,11 @@ function NavBar() {
 
   return (
     <div>
-      <Navbar className="my-navbar justify-content-center">
+      <Navbar className="my-navbar">
         <Nav className="navbar">
+        <div className="logo-container">
+            <Image src="logo.png" />
+        </div>
           <div className="icon-container">
             <Navbar.Brand href="#home">
               <img

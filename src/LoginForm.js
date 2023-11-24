@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import { Navbar } from 'react-bootstrap';
-import InDash from './components/IndashBoard';
+import ConsumerType from './components/ConsumerType';
 
 function Copyright(props) {
   return (
@@ -121,7 +121,7 @@ export default function SignInSide() {
           </>
         )}
         {showNavbar && <Navbar />}
-        {ShowDashboard && <InDash />}
+        {ShowDashboard && <ConsumerType />}
       </Grid>
     </ThemeProvider>
   );

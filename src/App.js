@@ -7,24 +7,28 @@ import Address from './components/Address';
 import SelfDeclaration from './components/SelfDeclaration';
 import ImportantDoc from './components/ImportantDoc';
 import DocChecklist from './components/DocChecklist';
-
+import ConnectionDetails from './components/ConnectionDetails';
+import ConsumerType from './components/ConsumerType';
+import MasterPage from './components/MasterPage';
+import Footerpage from './components/FooterPage';
 
 
 function App() {
   return (
     <div className="background-image" >
+      <MasterPage>
 {/* <CounterLimit/> */}
 
       
 {/* <Greeting name="Hello"/> */}
-<ImportantDoc/>
-   <Logo />
-     <NavBar />  
-     {/* <Login/>
+{/* <ImportantDoc/>
+         <Login/>
      <SelfDeclaration/>
-    <Address/> */}
-    <DocChecklist/>
-  
+    <Address/>
+    <ConnectionDetails/>
+    <DocChecklist/> */}
+  <Login/>
+  <Footerpage/>
     
       {/* <ConsumerType/> */}
       {/* <ConditionalRendering/> */}
@@ -33,7 +37,7 @@ function App() {
         <ProductItem name="Yadley London" price=" ₹ 9,999/-" description="Glass bottle with sweet mist " />
         <ProductItem name=" Apple Watch" price="₹ 19,999/-" description="Plane glass with Multicolor bands" />
       </div> */}
-
+</MasterPage>
     </div>
   );
 }

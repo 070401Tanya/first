@@ -19,7 +19,7 @@ function Footerpage() {
               <Col>
               <Nav.Link href="/" className="p-2">
                 <img style={{width: '40px'}} src="call.png"/>
-                <p>011 39999707 <br/>Fire & Shock Streetlight No.</p>
+                <p>011 39999707 </p>
                 </Nav.Link></Col>
               <Col>
               <Nav.Link href="/" className="mx-3 p-2">

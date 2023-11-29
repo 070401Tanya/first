@@ -40,6 +40,7 @@ function Individual() {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
+        
         return response.json(); // You can process the response data here if needed.
       })
       .then(() => {
@@ -72,11 +73,23 @@ function Individual() {
 
     alert('Content saved successfully.');
   };
+//validation 
+  const [validated, setValidated] = useState(false);
 
-  
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
+
   return (
     <div>
-      <Form >
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <div className="mainblock">
         
         <div className="div1">
@@ -93,9 +106,18 @@ function Individual() {
                 </Form.Control>
               </Form.Group>
 
-              <Form.Group as={Col} controlId="upload">
-                <Form.Label>
-                  <Image className="upload" src="uploadphoto.png" alt="Upload Photo" />
+              
+              <Form.Group  as={Col} className="imagestyle" controlId="uploadphoto">
+              
+                <Form.Label> <div  style={{ marginLeft: '70px' }}>
+                <Image className="upload" src="uploadphoto.png" alt="Upload Photo" />
+                </div>
+                <Form.Control
+                type="file"
+                id="imageInput"
+                style={{ display: 'none' }}
+                accept="image/*"
+                > </Form.Control>
                   <p>Allow only jpg/png files up to 100kb size</p>
                 </Form.Label>
               </Form.Group>
@@ -187,11 +209,12 @@ function Individual() {
             </Form.Control.Feedback>
               </Form.Group>
 
-              <Form.Group as={Col} controlId="signature">
-                <Form.Label>
+              <Form.Group  className="imagestyle"   as={Col} controlId="signature">
+                <Form.Label> <div  style={{ marginLeft: '30px' }}>
                   <Image className="upload" src="signature.png" alt="Upload Signature" />
+                  </div>
                   <p>Allow only jpg/png files up to 100kb size</p>
-                </Form.Label>
+                  </Form.Label>
               </Form.Group>
 
             </Row>

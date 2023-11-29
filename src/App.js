@@ -17,17 +17,15 @@ function App() {
   return (
     <div className="background-image" >
       <MasterPage>
-{/* <CounterLimit/> */}
 
-      
-{/* <Greeting name="Hello"/> */}
-{/* <ImportantDoc/>
-         <Login/>
+{/* <Login/> */}
+<Address/>
+<ConnectionDetails/>
+<ImportantDoc/>
      <SelfDeclaration/>
-    <Address/>
-    <ConnectionDetails/>
-    <DocChecklist/> */}
-  <Login/>
+      
+    <DocChecklist/>
+ 
   <Footerpage/>
     
       {/* <ConsumerType/> */}

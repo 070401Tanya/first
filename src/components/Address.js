@@ -20,6 +20,7 @@ function Address() {
         cityPostalCode: '',
         nearbyLocality: '',
         division: '',
+        poleNumber: '',
     });
     const [supplyAddress, setSupplyAddress] = useState({
         houseNo: '',
@@ -91,6 +92,7 @@ function Address() {
         supplyLandmark: ' ',
         supplyLandmarkDetails: ' ',
         supplyCityPin: ' ',
+        poleNumber: ' ',
      
           });
     
@@ -116,6 +118,7 @@ function Address() {
           supplyLandmark: formData.supplyLandmark,
           supplyLandmarkDetails: formData.supplyLandmarkDetails,
           supplyCityPin: formData.supplyCityPin,
+          poleNumber: formData.poleNumber,
         };
       
         // Send the formData to your backend API for database insertion.
@@ -366,21 +369,17 @@ function Address() {
                             )}
 
                             <br />
-                            <Form.Group  controlId="typeOrganization">
-                                            <Form.Label> City Postal Code</Form.Label>
-                                            <Form.Control type="text" value={supplyAddress.cityPostalCode} onChange={(e) => handleSupplyAddressChange('cityPostalCode', e.target.value)} />
-                                        </Form.Group>
+                            
                             <Form.Label className='consumer'>
                                 Indicate Landmarks
                             </Form.Label>
+                            <br/> <br/>
                             <Form.Group  controlId="typeOrganization">
                                             <Form.Label>  Pole No./Feeder Pillar No./Nearest House No. </Form.Label>
-                                            <Form.Control type="text" />
+                                            <Form.Control type="text" value={communicationAddress.poleNumber} onChange={(e) => handleCommunicationAddressChange('poleNumber', e.target.value)} />
                                         </Form.Group>                                    
                             <br />
-                            <Row className="mb-3">
-                                {/* ... (existing landmark fields) */}
-                            </Row>
+                           
                             <br /> <br />
                             <Button variant="primary" onClick={handleSubmit}>
                                 Submit

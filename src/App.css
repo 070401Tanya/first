@@ -320,12 +320,19 @@ text-align: left;
   .upload{
    border: 2px solid rgb(240, 240, 240); 
    border-radius: 5px;
-
+  
+   
   }
   .upload:hover{
     border: 2px solid grey;
     }
 
+    .imagestyle{
+      display: flex;
+      justify-content: end;
+      align-items: end ;
+     
+    }
 
     .heading{
 font-weight: bold;

@@ -8,56 +8,7 @@ import { Card } from 'react-bootstrap';
 
 function ConnectionDetails() {
 
-    // const [electricityOptions, setElectricityOptions] = useState([]);
-    // const [purposeOptions, setPurposeOptions] = useState([]);
-    // const [areaOptions, setAreaOptions] = useState([]);
-    // const [buildingOptions, setBuildingOptions] = useState([]);
-    // const [premisesOptions, setPremisesOptions] = useState([]);
-    // const [selectedElectricityOption, setSelectedElectricityOption] = useState('');
-    // const [selectedPurposeOption, setSelectedPurposeOption] = useState('');
-    // // Add state variables for other dropdowns as needed
-
-    // useEffect(() => {
-    //     // Use Promise.all to fetch options from multiple APIs simultaneously
-    //     Promise.all([
-    //         fetchOptionsFromBackend('Electricity'),
-    //         fetchOptionsFromBackend('Purpose'),
-    //         fetchOptionsFromBackend('Area'),
-    //         fetchOptionsFromBackend('Building'),
-    //         fetchOptionsFromBackend('Premises')
-    //         // Add more API calls as needed
-    //     ])
-    //         .then(([electricityData, purposeData, areaData, buildingData, premisesData]) => {
-    //             setElectricityOptions(electricityData);
-    //             setPurposeOptions(purposeData);
-    //             setAreaOptions(areaData);
-    //             setBuildingOptions(buildingData);
-    //             setPremisesOptions(premisesData);
-    //             // Update state variables for other dropdowns as needed
-    //         })
-    //         .catch(error => {
-    //             console.error("Error fetching data:", error);
-    //         });
-    // }, []);
-
-    // const fetchOptionsFromBackend = async (apiEndpoint) => {
-    //     try {
-    //         const response = await fetch(`http://localhost:5041/api/${apiEndpoint}`);
-    //         const data = await response.json();
-    //         return data;
-    //     } catch (error) {
-    //         console.error(`Error fetching ${apiEndpoint} data:`, error);
-    //         throw error;
-    //     }
-    // };
-
-    // const handleElectricityOptionChange = (e) => {
-    //     setSelectedElectricityOption(e.target.value);
-    // };
-
-    // const handlePurposeOptionChange = (e) => {
-    //     setSelectedPurposeOption(e.target.value);
-    // };
+    
     return (
         <div className="centered-box">
             <Card className="cardstyle" style={{ width: '60rem' }}>

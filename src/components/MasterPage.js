@@ -6,7 +6,7 @@ function MasterPage({children}){
     return(
 <div>
 <header>
-<Logo />
+{/* <Logo /> */}
 <NavBar/>
 </header>
 <main> 

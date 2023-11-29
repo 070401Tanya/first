@@ -18,24 +18,24 @@ function App() {
     <div className="background-image" >
       <MasterPage>
 
-{/* <Login/> */}
-<Address/>
-<ConnectionDetails/>
-<ImportantDoc/>
-     <SelfDeclaration/>
-      
-    <DocChecklist/>
- 
-  <Footerpage/>
-    
-      {/* <ConsumerType/> */}
-      {/* <ConditionalRendering/> */}
-      {/* <div style={{ display: "flex" }}>
+        {/* <Login/> */}
+        <Address />
+        <ConnectionDetails />
+        <ImportantDoc />
+        <SelfDeclaration />
+
+        <DocChecklist />
+
+        <Footerpage />
+
+        {/* <ConsumerType/> */}
+        {/* <ConditionalRendering/> */}
+        {/* <div style={{ display: "flex" }}>
         <ProductItem name="Hand Bag" price="₹ 4,999/-" description="Beige in color, side handle to carry" />
         <ProductItem name="Yadley London" price=" ₹ 9,999/-" description="Glass bottle with sweet mist " />
         <ProductItem name=" Apple Watch" price="₹ 19,999/-" description="Plane glass with Multicolor bands" />
       </div> */}
-</MasterPage>
+      </MasterPage>
     </div>
   );
 }

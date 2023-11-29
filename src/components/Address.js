@@ -75,9 +75,9 @@ function Address() {
     const [formData, setFormData] = useState({
         houseNo: ' ',
         floor: '',
-        buildingName:'',
+        buildingName: '',
         street: '',
-        colonyArea: '' ,
+        colonyArea: '',
         landmark: '',
         landmarkDetails: ' ',
         cityPin: ' ',
@@ -85,7 +85,7 @@ function Address() {
         division: ' ',
         radioButton: 'true',
         supplyHouseNo: ' ',
-        supplyFloor:' ',
+        supplyFloor: ' ',
         supplyBuildingName: ' ',
         supplyStreet: ' ',
         supplyColonyArea: ' ',
@@ -93,65 +93,65 @@ function Address() {
         supplyLandmarkDetails: ' ',
         supplyCityPin: ' ',
         poleNumber: ' ',
-     
-          });
-    
+
+    });
+
     const handleFormSubmit = () => {
         // Create an object with the necessary fields for the address table
         const addressData = {
-          houseNo: formData.houseNo,
-          floor: formData.floor,
-          buildingName: formData.buildingName,
-          street: formData.street,
-          colonyArea: formData.colonyArea,
-          landmark: formData.landmark,
-          landmarkDetails: formData.landmarkDetails,
-          cityPin: formData.cityPin,
-          locality: formData.locality,
-          division: formData.division,
-          radioButton: formData.radioButton,
-          supplyHouseNo: formData.supplyHouseNo,
-          supplyFloor: formData.supplyFloor,
-          supplyBuildingName: formData.supplyBuildingName,
-          supplyStreet: formData.supplyStreet,
-          supplyColonyArea: formData.supplyColonyArea,
-          supplyLandmark: formData.supplyLandmark,
-          supplyLandmarkDetails: formData.supplyLandmarkDetails,
-          supplyCityPin: formData.supplyCityPin,
-          poleNumber: formData.poleNumber,
+            houseNo: formData.houseNo,
+            floor: formData.floor,
+            buildingName: formData.buildingName,
+            street: formData.street,
+            colonyArea: formData.colonyArea,
+            landmark: formData.landmark,
+            landmarkDetails: formData.landmarkDetails,
+            cityPin: formData.cityPin,
+            locality: formData.locality,
+            division: formData.division,
+            radioButton: formData.radioButton,
+            supplyHouseNo: formData.supplyHouseNo,
+            supplyFloor: formData.supplyFloor,
+            supplyBuildingName: formData.supplyBuildingName,
+            supplyStreet: formData.supplyStreet,
+            supplyColonyArea: formData.supplyColonyArea,
+            supplyLandmark: formData.supplyLandmark,
+            supplyLandmarkDetails: formData.supplyLandmarkDetails,
+            supplyCityPin: formData.supplyCityPin,
+            poleNumber: formData.poleNumber,
         };
-      
+
         // Send the formData to your backend API for database insertion.
         fetch('http://localhost:5041/api/Address', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(addressData),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(addressData),
         })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json(); // You can process the response data here if needed.
-          })
-          .then(() => {
-            // Reset the form fields or show a success message.
-            setFormData({
-              title: 'Mr.',
-              firstName: '',
-              middleName: '',
-              lastName: '',
-              relationship: 'Son of',
-              gName: '',
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // You can process the response data here if needed.
+            })
+            .then(() => {
+                // Reset the form fields or show a success message.
+                setFormData({
+                    title: 'Mr.',
+                    firstName: '',
+                    middleName: '',
+                    lastName: '',
+                    relationship: 'Son of',
+                    gName: '',
+                });
+                alert('Data submitted successfully.');
+            })
+            .catch((error) => {
+                console.error('Error submitting data:', error);
             });
-            alert('Data submitted successfully.');
-          })
-          .catch((error) => {
-            console.error('Error submitting data:', error);
-          });
-      };
-      
+    };
+
 
     return (
         <div className="centered-box">
@@ -214,7 +214,7 @@ function Address() {
                                     <br />
                                     <Form.Group as={Col} controlId="typeOrganization">
                                         <Form.Label>Landmark Details</Form.Label>
-                                        <Form.Control type="text" value={communicationAddress.landmarkDetails} onChange={(e) => handleCommunicationAddressChange('landmarkDetails', e.target.value)}  />
+                                        <Form.Control type="text" value={communicationAddress.landmarkDetails} onChange={(e) => handleCommunicationAddressChange('landmarkDetails', e.target.value)} />
                                     </Form.Group>
 
                                     <Form.Group as={Col} controlId="typeOrganization">
@@ -369,18 +369,18 @@ function Address() {
                             )}
 
                             <br />
-                            
+
                             <Form.Label className='consumer'>
                                 Indicate Landmarks
                             </Form.Label>
-                            <br/> <br/>
-                            <Form.Group  controlId="typeOrganization">
-                                            <Form.Label>  Pole No./Feeder Pillar No./Nearest House No. </Form.Label>
-                                            <Form.Control type="text" value={communicationAddress.poleNumber} onChange={(e) => handleCommunicationAddressChange('poleNumber', e.target.value)} />
-                                        </Form.Group>                                    
-                            <br />
-                           
                             <br /> <br />
+                            <Form.Group controlId="typeOrganization">
+                                <Form.Label>  Pole No./Feeder Pillar No./Nearest House No. </Form.Label>
+                                <Form.Control type="text" value={communicationAddress.poleNumber} onChange={(e) => handleCommunicationAddressChange('poleNumber', e.target.value)} />
+                            </Form.Group>
+                            <br />
+
+                            <br /> <br /> <br />
                             <Button variant="primary" onClick={handleSubmit}>
                                 Submit
                             </Button>

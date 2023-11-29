@@ -131,15 +131,17 @@ function ConnectionDetails() {
                                 <Form.Check
                                     type="radio"
                                     label="Yes"
-                                    id="relationship"
-                                    value="Son of"
+                                    id="yes"
+                                    value="yes"
+                                    name='identification'
                                     inline
                                 />
                                 <Form.Check
                                     type="radio"
                                     label="No"
-                                    id="relationship"
-                                    value="Daughter of"
+                                    id="no"
+                                    value="no"
+                                    name='identification'
                                     inline
                                 />
                             </div>

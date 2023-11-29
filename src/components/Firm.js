@@ -27,7 +27,6 @@ const Firm = () => {
   };
 
   const handleFirmSubmit = () => {
-    // Create a JSON object from the form data
     const dataToSend = {
       firmName: formData.firmName,
       aSignatory: formData.aSignatory,
@@ -36,9 +35,7 @@ const Firm = () => {
       gstNo: formData.gstNo,
       panNo: formData.panNo,
     };
-
-    // Make an API call to post the data to your database here.
-    // Replace 'your-api-endpoint' with your actual API endpoint.
+  
     fetch('http://localhost:5041/WeatherForecast', {
       method: 'POST',
       headers: {
@@ -48,11 +45,30 @@ const Firm = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          throw  Error('Network response was not ok');
+          throw Error('Network response was not ok');
         }
-        return response.json(); // You can process the response data here if needed.
+  
+        // Check the content type of the response
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          // If the response is JSON, parse it
+          return response.json();
+        } else {
+          // If the response is not JSON, return it as text
+          return response.text();
+        }
       })
-      .then(() => {
+      .then((data) => {
+        if (typeof data === 'object') {
+          // Data is JSON, process accordingly
+          // For example, you can log the JSON data
+          console.log('JSON response:', data);
+        } else {
+          // Data is not JSON, might be a string
+          console.log('Non-JSON response:', data);
+          // Show a different alert or handle the non-JSON data as needed
+        }
+  
         alert('Data submitted successfully.');
       })
       .catch((error) => {
@@ -60,7 +76,7 @@ const Firm = () => {
         alert('An error occurred while submitting the data.');
       });
   };
-
+  
   const handlePreview = () => {
     setShowPreview(true);
   };
@@ -79,91 +95,97 @@ const Firm = () => {
 
   return (
     <div>
-      <br/>
+      <br />
       <Row>
-      <Form.Group as ={Col} controlId="firmName">
-        <Form.Label>Firm/Trust/Company/Others Name:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Organization Name"
-          onChange={handleInputChange}
-          value={formData.firmName}
-        />
-      </Form.Group>
+        <Form.Group as={Col} controlId="firmName">
+          <Form.Label>Firm/Trust/Company/Others Name:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Organization Name"
+            onChange={handleInputChange}
+            value={formData.firmName}
+          />
+        </Form.Group>
 
-      <Form.Group as={Col} controlId="upload">
-  <Form.Label>
-    <Image className="upload" src="uploadphoto.png" alt="Upload Photo"  />
-    <p>Allow only jpg/png files up to 100kb size</p>
-  </Form.Label>
-</Form.Group>
+        <Form.Group as={Col} className="imagestyle" controlId="uploadphoto">
 
+          <Form.Label> <div style={{ marginLeft: '70px' }}>
+          <Form.Control style={{display: 'none'}}id='uploadphoto' type="file"  />
+            <Image className="upload" src="uploadphoto.png" alt="Upload Photo" />
+          </div>
+            <p>Allow only jpg/png files up to 100kb size</p>
+          </Form.Label>
+        </Form.Group>
       </Row>
-     
-      <br/>
+
+      <br />
       <Row className="mb-3">
-      <Form.Group as={Col} controlId="aSignatory"  >
-        <Form.Label>Name of Authorized Signatory:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Authorized Signatory Name"
-          onChange={handleInputChange}
-          value={formData.aSignatory}
-        />
-      </Form.Group>
-      <br/>
-      <Form.Group as={Col} controlId="dSignatory" >
-        <Form.Label>Designation of Signatory:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Signatory Designation"
-          onChange={handleInputChange}
-          value={formData.dSignatory}
-        />
-      </Form.Group>
-      <br/>
-      <Form.Group as={Col} controlId="typeOrganization">
-        <Form.Label>Type of Organization:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Organization Type"
-          onChange={handleInputChange}
-          value={formData.typeOrganization}
-        />
-      </Form.Group>
-      </Row>
-      <br/>
-      <Row>
-      <Form.Group as={Col} controlId="gstNo">
-        <Form.Label>GST No:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="GST No"
-          onChange={handleInputChange}
-          value={formData.gstNo}
-        />
-      </Form.Group>
-      <br/>
-      <Form.Group as={Col} controlId="panNo">
-        <Form.Label>PAN No:</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="PAN No"
-          onChange={handleInputChange}
-          value={formData.panNo}
-        />
-      </Form.Group>
-      
-      <Form.Group as={Col} controlId="signature">
-  <Form.Label>
-    <Image className="upload" src="signature.png" alt="Upload Signature"  />
-    <p>Allow only jpg/png files up to 100kb size</p>
-  </Form.Label>
-</Form.Group>
-
-
+        <Form.Group as={Col} controlId="aSignatory"  >
+          <Form.Label>Name of Authorized Signatory:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Authorized Signatory Name"
+            onChange={handleInputChange}
+            value={formData.aSignatory}
+          />
+        </Form.Group>
+        <br />
+        <Form.Group as={Col} controlId="dSignatory" >
+          <Form.Label>Designation of Signatory:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Signatory Designation"
+            onChange={handleInputChange}
+            value={formData.dSignatory}
+          />
+        </Form.Group>
+        <br />
+        <Form.Group as={Col} controlId="typeOrganization">
+          <Form.Label>Type of Organization:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Organization Type"
+            onChange={handleInputChange}
+            value={formData.typeOrganization}
+          />
+        </Form.Group>
       </Row>
       <br />
+      <Row >
+        <Form.Group as={Col} xs={12} sm={6} md={4} lg={3} controlId="gstNo">
+        <Form.Control style={{display: 'none'}}id='signature' type="file"  />
+          <Form.Label className="w-100">GST No:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="GST No"
+            onChange={handleInputChange}
+            value={formData.gstNo}
+          />
+        </Form.Group>
+        <br />
+        <Form.Group as={Col} controlId="panNo">
+          <Form.Label>PAN No:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="PAN No"
+            onChange={handleInputChange}
+            value={formData.panNo}
+          />
+        </Form.Group>
+
+        <Form.Group className="imagestyle" as={Col} controlId="signature">
+          <Form.Label> <div style={{ marginLeft: '30px' }}>
+          <Form.Control style={{display: 'none'}}id='signature' type="file"  />
+            <Image className="upload" src="signature.png" alt="Upload Signature" />
+          </div>
+            <p>Allow only jpg/png files up to 100kb size</p>
+          </Form.Label>
+        </Form.Group>
+
+
+      </Row>
+
+       <br />
       <Button variant="primary" onClick={handleFirmSubmit}>
         Submit</Button>
       <Button variant="secondary" onClick={handlePreview}>
@@ -186,7 +208,7 @@ const Firm = () => {
           <Button variant="secondary" onClick={handleClosePreview}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSaveChanges} style={{padding: '50px'}}>
+          <Button variant="primary" onClick={handleSaveChanges} >
             Save Changes
           </Button>
         </Modal.Footer>

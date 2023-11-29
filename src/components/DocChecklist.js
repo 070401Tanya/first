@@ -24,7 +24,7 @@ function DocChecklist() {
                                             officer of the Government and the test Certificate is available with the applicant.</li></Col>
                                     <Col>
                                         <input type="radio" id="option1" name="options" value="option1" />
-                                        <label for="option1">yes</label>
+                                        <label for="option1">yes</label></Col><Col>
                                         <input type="radio" id="option2" name="options" value="option2" />
                                         <label for="option2">No</label>
                                     </Col>
@@ -37,7 +37,7 @@ function DocChecklist() {
                                         <li>Do you have lift installed?</li></Col>
                                     <Col>
                                         <input type="radio" id="option1" name="options" value="option1" />
-                                        <label for="option1">yes</label>
+                                        <label for="option1">yes</label></Col><Col>
                                         <input type="radio" id="option2" name="options" value="option2" />
                                         <label for="option2">No</label> </Col>
                                 </Row>
@@ -46,11 +46,11 @@ function DocChecklist() {
                                 <input type='text' />
                                 <br />     <br />
                                 <Row>
-                                    <Col md={6} lg={7}>
+                                    <Col md={6}  lg={7}>
                                         <li>Do you want to avail e-Bill Services(paperless) on email?</li></Col>
                                     <Col>
                                         <input type="radio" id="option1" name="options" value="option1" />
-                                        <label for="option1">yes</label>
+                                        <label for="option1">yes</label> </Col><Col>
                                         <input type="radio" id="option2" name="options" value="option2" />
                                         <label for="option2">No</label> </Col>
                                 </Row>
@@ -62,7 +62,7 @@ function DocChecklist() {
                                     </Col>
                                     <Col>
                                         <input type="radio" id="option1" name="options" value="option1" />
-                                        <label for="option1">yes</label>
+                                        <label for="option1">yes</label> </Col>  <Col>
                                         <input type="radio" id="option2" name="options" value="option2" />
                                         <label for="option2">No</label> </Col>
                                 </Row>
